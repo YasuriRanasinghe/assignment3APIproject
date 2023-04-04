@@ -2,6 +2,8 @@
 
 About My Project
 
+My task is to create a Node.js application using Express.js and MongoDB and implement 5 APIs that perform distinct CRUD operations on a collection of data.
+
 I selected as my project about various types of products. They are soap, shampoo, say cauce, toothpaste and facewash. 
 firstly, I created package.json and packagelock.json files. Then installed exprees, mongoose and nodemon. created server.js file. 
 I did type codes on that. In that folder, include many neccessary code for my project. such as get product, post product, 
