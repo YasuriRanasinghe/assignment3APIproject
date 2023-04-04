@@ -76,7 +76,7 @@ app.put('/product: id', async(req, res)=>{
 
 //delete a product
 
-app.delete('/products/:id', async(req, res)=>{
+app.delete('/product/:id', async(req, res)=>{
     try{
         const {id} = req.params;
         const product = await Product.findByIdAndDelete (id);
