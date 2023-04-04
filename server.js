@@ -19,7 +19,7 @@ app.listen(3000, ()=>{
     console.log('Node API app is running on port 3000')
 })
 
-
+//get product
 app.get('/product', async(req, res) =>{
     try{
         const products = await Product.find({});
@@ -30,6 +30,7 @@ app.get('/product', async(req, res) =>{
     }
 })
 
+//get product with id
 app.get('/product/:id', async(req, res)=>{
     try{
         const {id} = req.params;
@@ -42,6 +43,7 @@ app.get('/product/:id', async(req, res)=>{
     }
 })
 
+//post product
 app.post('/product', async (req, res) =>{
     try {
         const product = await Product.create(req.body)
@@ -65,7 +67,7 @@ app.put('/product: id', async(req, res)=>{
             return res.status(404).json ({message: `cannot find any product with ID ${id}`})
 
         }
-        const updatedProduct = await Product.findById ('id');
+        const updatedProduct = await Product.findById (id);
         res.status(200).json (updatedProduct);
 
     } catch (error) {
@@ -76,7 +78,7 @@ app.put('/product: id', async(req, res)=>{
 
 //delete a product
 
-app.delete('/products/:id', async(req, res)=>{
+app.delete('/product/:id', async(req, res)=>{
     try{
         const {id} = req.params;
         const product = await Product.findByIdAndDelete (id);
