@@ -65,7 +65,7 @@ app.put('/product: id', async(req, res)=>{
             return res.status(404).json ({message: `cannot find any product with ID ${id}`})
 
         }
-        const updatedProduct = await Product.findById ('id');
+        const updatedProduct = await Product.findById (id);
         res.status(200).json (updatedProduct);
 
     } catch (error) {
