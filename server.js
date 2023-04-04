@@ -30,6 +30,7 @@ app.get('/product', async(req, res) =>{
     }
 })
 
+//get product with id
 app.get('/product/:id', async(req, res)=>{
     try{
         const {id} = req.params;
